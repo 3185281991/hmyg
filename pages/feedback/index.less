@@ -1,0 +1,102 @@
+/* pages/feedback/index.wxss */
+
+.choose {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 80rpx;
+  background-color: aqua;
+
+  view {
+    flex: 1;
+    color: orange;
+    font-size: 28rpx;
+
+    line-height: 80rpx;
+    text-align: center;
+    border-bottom: 6rpx solid #aaa;
+  }
+  .active {
+    color: red;
+    border-bottom-color: red;
+  }
+}
+.con {
+  position: absolute;
+  top: 80rpx;
+  width: 100%;
+  .feed_top {
+    background-color: #d5d0d0;
+    .feed_title {
+      width: 100%;
+      font-size: 35rpx;
+      padding-top: 10rpx;
+      padding-left: 10rpx;
+      height: 60rpx;
+    }
+    .feed_type {
+      display: flex;
+      height: 190rpx;
+      flex-wrap: wrap;
+      .item {
+        width: 28%;
+        margin-left: 5%;
+        margin-top: 15rpx;
+        text-align: center;
+        font-size: 30rpx;
+        background-color: #fff;
+        height: 60rpx;
+        line-height: 60rpx;
+      }
+    }
+  }
+  .info {
+    width: 90%;
+    margin: 30rpx auto;
+    .text {
+      min-height: 450rpx;
+      font-size: 30rpx;
+      textarea {
+        background-color: #d5d0d0;
+        padding: 10rpx;
+        width: 100%;
+        min-height: 90%;
+        border-radius: 15rpx;
+      }
+      .tool {
+        margin-top: 10rpx;
+        display: flex;
+        flex-wrap: wrap;
+        button {
+          width: 90rpx;
+          height: 90rpx;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          margin-left: 10rpx;
+          background-color: rgb(246, 234, 234);
+        }
+      }
+    }
+    .btn {
+      button {
+        margin-top: 10rpx;
+        float: right;
+        width: 180rpx;
+        height: 90rpx;
+        display: flex;
+        font-size: 30rpx;
+        justify-content: center;
+        background-color: coral;
+        color: white;
+        align-items: center;
+        padding: 0;
+        margin-left: 30rpx;
+      }
+    }
+  }
+}

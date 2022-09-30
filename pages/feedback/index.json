@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "upImg": "../../components/upImg/upimg"
+  },
+  "navigationBarTitleText": "意见反馈"
+}

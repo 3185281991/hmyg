@@ -1,0 +1,40 @@
+<!--pages/collect/index.wxml-->
+<view class="love">
+  <view class="choose">
+    <view wx:for="{{chooseList}}" wx:key="*this" bindtap="handleClick" data-index="{{index}}" class="{{activeIndex===index?'active':''}}" >
+      {{item}}
+    </view>
+  </view>
+  <view class="loveList">
+     <view class="top">
+        <view>
+          全部
+        </view>
+        <view>
+          正在热卖
+        </view>
+        <view>
+          即将上线
+        </view>
+
+     </view>
+        <view class="loveitem" wx:for="{{collect}}" wx:key="goods_id">
+                  <navigator class="cart_img_wrap" url="/pages/goods_detail/index?goods_id={{item.goods_id}}" >
+                    <image  mode="widthFix"  src="{{item.goods_img}}"  />
+                  </navigator>
+                  <view class="cart_info_wrap">
+                      <view class="goods_name">
+                          {{item.goods_name}}
+                      </view>
+                      <view class="goods_price_wrap">
+                          <view class="goods_price">
+                          ￥{{item.goods_price}}
+                          </view>
+                      </view>
+                  </view>
+
+        </view>
+
+  </view>
+
+</view>

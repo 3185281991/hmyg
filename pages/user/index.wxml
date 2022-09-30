@@ -1,0 +1,171 @@
+<!--pages/user/index.wxml-->
+<view class="user">
+   <view class="user_info_wrap">
+    <image class="bimg" src="{{userinfo.avatarUrl}}" mode="" />
+    <view class="userinfo">
+        <block wx:if="{{userinfo.nickName}}">
+                <image class="" src="{{userinfo.avatarUrl}}" mode="aspectFit"  />
+              <view class="name">
+                {{userinfo.nickName}}
+              </view>
+        </block>
+          <block wx:else>
+                <navigator  url="/pages/login/index" >
+                  登录
+                </navigator>
+          </block>
+    </view>
+      
+   </view>
+   <view class="under">
+     <view class="like">
+       <view class=" item">
+         <navigator  url="/pages/collect/index?type=1" >
+            <view>
+              0
+            </view>
+               <view>
+              收藏的店铺
+            </view>
+          </navigator>
+       </view>
+          <view class=" item">
+          <navigator  url="/pages/collect/index?type=1" >
+              <view>
+                 {{collectNum}}
+              </view>
+               <view>
+                   收藏的商品
+               </view>  
+              </navigator>  
+       </view>
+           
+
+        <view class=" item">
+               <navigator  url="/pages/collect/index?type=1" >
+             <view>
+              0
+            </view>
+               <view>
+              关注的商品
+            </view>
+         </navigator>
+       </view>
+        <view class=" item">
+         <navigator  url="/pages/collect/index?type=1" >
+           <view>
+              0
+            </view>
+               <view>
+              我的足迹
+            </view>
+         </navigator>
+         
+       </view>
+  </view>
+  <view class="shopinfo">
+      <view class="top">
+        我的订单
+      </view>
+      <view class="order">
+          <view class="oitem item">
+            <navigator  url="/pages/order/index?type=1" >
+                     <view class="iconfont icon-dingdan">
+             </view>
+              <view>
+                全部订单
+              </view>
+          </navigator>
+            
+    
+          </view>
+           <view class="oitem item">
+                <navigator  url="/pages/order/index?type=2" >
+               <view class="iconfont icon-fukuanguanli">
+              
+             </view>
+              <view>
+                待付款
+              </view>
+          </navigator>
+          
+                
+          </view>
+           <view class="oitem item">
+                   <navigator  url="/pages/order/index?type=3" >
+                   <view class="iconfont icon-receipt-address">
+              
+             </view>
+              <view>
+                待收货
+              </view>
+          </navigator>
+      
+                
+          </view>
+           <view class="oitem item">
+              <navigator  url="/pages/order/index?type=4" >
+                <view class="iconfont icon-tuihuotuikuan_dianpu">
+              
+             </view>
+              <view>
+                退款退货
+              </view>
+          </navigator>
+      
+                
+          </view>
+      </view>
+        
+  </view>
+
+  <view class="other">
+   <view class="othitem">
+        <navigator url="" hover-class="navigator-hover" >
+                  <view class="left">
+                  收货地址管理
+              </view>
+        </navigator>
+     </view>
+     <view class="othitem">
+           <navigator url="" hover-class="navigator-hover" >     
+                <view class="left">
+              联系客服
+            </view>
+            <view class="right">
+                400-618-4000
+            </view>
+           </navigator>
+ 
+     </view>
+       <view class="othitem">
+           <navigator url="/pages/feedback/index" hover-class="navigator-hover" >
+            <view class="left">
+              意见反馈
+            </view> 
+        </navigator>
+      
+     </view>
+      <view class="othitem">
+          <navigator url="" hover-class="navigator-hover" >
+             <view class="left">
+          关于我们
+        </view> </navigator>
+     
+     </view>
+      <view class="othitem">
+          <navigator url="" hover-class="navigator-hover" >
+              <view class="left">
+          把应用推荐给其他人
+        </view>
+         </navigator>
+    
+     </view>
+  </view>
+      
+  
+   </view>
+</view>
+  
+
+  

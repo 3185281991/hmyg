@@ -1,0 +1,47 @@
+<!--pages/order/index.wxml-->
+<view class="order">
+  <view class="choose">
+    <view wx:for="{{chooseList}}" wx:key="*this" bindtap="handleClick" data-index="{{index}}" class="{{activeIndex===index?'active':''}}" >
+      {{item}}
+    </view>
+  </view>
+  <view class="orderlist">
+  <block wx:if="{{allList[activeIndex+1] &&allList[activeIndex+1].length>0 }}">
+     <block wx:for="{{allList[activeIndex+1]}}" wx:key="index">
+            <view class="orderitem">
+                <view class="item">
+                  <view class="left">
+                      订单编号
+                  </view>
+                    <view class="right">
+                      {{item.order_number}}
+                    </view>
+                      
+                </view>
+                <view class="item">
+                  <view class="left">
+                      订单价格
+                  </view>
+                    <view class="right price">
+                      ￥ {{item.order_price}}
+                    </view>
+                </view>
+                <view class="item">
+                  <view class="left">
+                      订单日期
+                  </view>
+                    <view class="right">
+                    {{item.create_time}}
+                    </view>
+                </view>
+                
+          </view>
+      </block>
+  </block>
+  <block wx:else>
+    <image  src="/img/other/nocart.jpg" mode="widthFix"/>
+  </block>
+  </view>
+    
+</view>
+  

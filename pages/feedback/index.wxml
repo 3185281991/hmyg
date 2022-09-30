@@ -1,0 +1,62 @@
+<!--pages/feedback/index.wxml-->
+<view class="feedback">
+  <view class="choose">
+    <view wx:for="{{chooseList}}" wx:key="*this" bindtap="handleClick" data-index="{{index}}" class="{{activeIndex===index?'active':''}}" >
+      {{item}}
+    </view>
+  </view>
+  <view class="con">
+  <view class="feed_top">
+         <view class="feed_title">
+       问题种类
+     </view>
+      <view class="feed_type">
+         <view class="item">
+            功能建议
+         </view>
+             <view class="item">
+            购买遇到的问题
+         </view>
+           <view class="item">
+            性能问题
+         </view>
+           <view class="item">
+            其他
+         </view>
+      </view>
+  </view>
+    
+    
+    <view class="info">
+        <view class="text">
+          <textarea  	bindinput="textinput" value="{{value}}" placeholder="描述信息">
+            
+          </textarea>
+          <view class="tool">
+              <button bindtap="chooseimg">
+                +
+              </button>
+              <block wx:for="{{imgs}}" wx:key="*this">
+                 <upImg src="{{item}}" binddeleteImg="deleteImg"></upImg>
+              </block>
+          </view>
+        </view>
+        
+        <view class="btn">
+           <button bindtap="submitinfo">
+              <icon class="" type="success_no_circle" size="23" color="#fff" >
+              </icon>
+                提交
+            </button>
+          
+        </view>
+          
+      
+    </view>
+      
+  
+          
+  </view>
+    
+</view>
+  

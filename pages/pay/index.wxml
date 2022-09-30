@@ -1,0 +1,62 @@
+<!--pages/cart/index.wxml-->
+<view class="pay">
+    <view class="info">
+    <view class="user_info">
+          <view class="username">
+             收货人: {{address.userName}}
+          </view>
+        <view class="conInfo">
+           {{address.provinceName+address.cityName+address.countyName+address.detailInfo}}
+        </view>
+    </view>
+        <view class="user_tel">
+          {{address.telNumber}}
+        </view>
+
+    </view>
+
+   <view class="cart_content">
+       <view class="cart_top">
+           商品信息
+       </view>
+      <view class="main">   
+            <view class="cart_item" wx:for="{{cart}}" wx:key="goods_id">
+                  <navigator class="cart_img_wrap" url="/pages/goods_detail/index?goods_id={{item.goods_id}}" >
+                    <image  mode="widthFix"  src="{{item.goods_img}}"  />
+                  </navigator>
+                  <view class="cart_info_wrap">
+                      <view class="goods_name">
+                          {{item.goods_name}}
+                      </view>
+                      <view class="goods_price_wrap">
+                          <view class="goods_price">
+                          ￥{{item.goods_price}}
+                          </view>
+                          <view class="cart_num_tool">
+                                   X {{item.num}} 件
+                          </view>
+                      </view>
+                  </view>
+                    
+              </view>
+      </view>
+   </view>
+   <view class="result">
+      <view class="center"> 
+        <view class="top">
+           总计: ￥ {{price}}
+        </view>
+          <view class="under">
+            包含运费
+          </view>
+            
+      </view>
+      <view class="btn" bindtap="pay">
+       立即支付({{num}})
+      </view>
+           
+   </view>
+     
+     
+</view>
+

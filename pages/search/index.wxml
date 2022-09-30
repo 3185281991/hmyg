@@ -1,0 +1,26 @@
+<!--pages/search/index.wxml-->
+<view class="search">
+      <view class="input">
+        <input value="{{value}}" class="{{active?'active':''}}"   placeholder="请输入搜索信息"  bindinput="handleInput" bindfocus="inputfoucs"/>
+        <button hidden="{{!active}}" size="mini" bindtap="closepropt">
+          取消
+        </button>
+          
+      </view>
+      <view class="infolist">
+      <block wx:for="{{query}}">
+            <view class="item"> 
+                <navigator  url="/pages/goods_detail/index?goods_id={{item.goods_id}}" >
+                  {{item.goods_name}}     
+                </navigator> 
+            </view>
+      </block>
+        
+     
+        
+     
+            
+      </view>
+        
+</view>
+  

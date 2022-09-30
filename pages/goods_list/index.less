@@ -1,0 +1,59 @@
+/* pages/goods_list/index.wxss */
+.choose {
+  margin-top: 5rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  view {
+    flex: 1;
+    color: orange;
+    font-size: 28rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-bottom: 6rpx solid #aaa;
+  }
+  .active {
+    color: coral;
+    border-bottom-color: var(--themeColor);
+  }
+}
+.content {
+  width: 100%;
+  .goods_item {
+    padding: 10rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2rpx solid #aaa;
+    overflow: hidden;
+    height: 200rpx;
+    .left {
+      height: 100%;
+      text-align: center;
+      flex: 2;
+      height: 100%;
+      image {
+        width: 70%;
+        max-height: 100%;
+      }
+    }
+    .right {
+      flex: 3;
+      view {
+        font-size: 30rpx;
+      }
+      .goods_info {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      .price {
+        color: rgb(249, 92, 92);
+        font-size: 32rpx;
+      }
+    }
+  }
+}

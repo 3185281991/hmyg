@@ -1,0 +1,127 @@
+/* pages/user/index.wxss */
+.user {
+  background-color: #ccc;
+}
+.user_info_wrap {
+  width: 100%;
+  height: 400rpx;
+  background-color: var(--themeColor);
+}
+.user_info_wrap .bimg {
+  width: 100%;
+  height: 100%;
+  filter: blur(10rpx);
+}
+.user_info_wrap .userinfo {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 450rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.user_info_wrap .userinfo image {
+  margin-top: 40rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .userinfo .name {
+  font-size: 32rpx;
+  margin-top: 30rpx;
+}
+.user_info_wrap .userinfo navigator {
+  font-size: 36rpx;
+  width: 200rpx;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  border: 1rpx solid white;
+  color: coral;
+}
+.under {
+  z-index: 2;
+  position: relative;
+  top: -111rpx;
+  width: 90%;
+  margin: 0 auto;
+}
+.like {
+  width: 100%;
+  height: 120rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.item view:nth-child(1) {
+  color: var(--themeColor);
+  text-align: center;
+}
+.item view:nth-child(2) {
+  font-size: 30rpx;
+}
+.shopinfo {
+  width: 100%;
+  height: 180rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.shopinfo .top {
+  height: 60rpx;
+  font-size: 35rpx;
+  border-bottom: 1rpx solid coral;
+  padding-left: 15rpx;
+  line-height: 60rpx;
+}
+.shopinfo .order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120rpx;
+}
+.shopinfo .order .oitem .iconfont {
+  font-size: 55rpx;
+  text-align: center;
+}
+.other {
+  width: 100%;
+}
+.other .othitem {
+  width: 100%;
+  margin-top: 10rpx;
+  line-height: 80rpx;
+  padding-left: 15rpx;
+  font-size: 35rpx;
+  height: 80rpx;
+  background-color: #fff;
+}
+.other .othitem navigator {
+  width: 100%;
+  height: 100%;
+}
+.other .othitem:nth-of-type(1) {
+  margin: 20rpx 0;
+}
+.other .othitem:nth-of-type(2) navigator {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.other .othitem:nth-of-type(2) navigator .right {
+  margin-right: 15rpx;
+}
+.other .othitem:last-child {
+  margin-top: 20rpx;
+}

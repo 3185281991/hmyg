@@ -1,0 +1,30 @@
+<!--pages/goods_list/index.wxml-->
+<view class="goodslist">
+  <search></search>
+  <view class="choose">
+    <view wx:for="{{chooseList}}" wx:key="*this" bindtap="handleClick" data-index="{{index}}" class="{{activeIndex===index?'active':''}}" >
+      {{item}}
+    </view>
+  </view>
+  <block wx:if="{{activeIndex===0}}">
+      <view class="content">
+       <navigator wx:for="{{goods_list}}" wx:key="goods_id" class="goods_item" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+          <view class="left">
+            <image src="{{item.goods_small_logo || 'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg' }}" mode="widthFix"/>
+          </view>
+          <view class="right">
+                <view class="goods_info">
+               {{item.goods_name}}
+                </view>
+                  <view class="price">
+                 {{item.goods_price}}              
+                  </view>
+                    
+          </view>
+         </navigator>
+     </view>
+  </block>
+    
+
+</view>
+  
